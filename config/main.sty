@@ -1,0 +1,74 @@
+
+% ===== BEGIN IMPORTS =====
+% Importing packages for dynamic indexes
+\usepackage{etoolbox}
+\usepackage[bookmarks]{hyperref}
+
+% Library needed for using songs
+\usepackage[chorded]{songs}
+
+% library for tuning margins
+\usepackage[headheight=110pt]{geometry}
+
+% Package to support latin characters
+\usepackage[utf8]{inputenc}
+
+% Package for colors and styling
+\usepackage[dvipsnames,table,xcdraw]{xcolor}
+
+% Importing own library for creating tabs 
+\usepackage{config/guitartabs}
+
+% Importing chords dictionary
+\usepackage{config/catalogo_acordes}
+
+% Library for customized Header and Footer
+\usepackage{fancyhdr}
+% ===== END IMPORTS =====
+
+
+% ===== BEGIN STYLING =====
+% Line for ignoring verse enumeration
+\noversenumbers
+
+% For a chord to cover several words
+\MultiwordChords
+
+% Changing margins
+\geometry{top=.75in,bottom=.75in,left=.50in,right=.50in}
+
+% Specifying two columns for all songs
+\songcolumns{2}
+
+% Setting up language
+% \usepackage[spanish]{babel}
+
+% Re-writing colors
+\renewcommand\printchord[1]{{\small\sffamily\it\color{black!70!white}#1}}
+\renewcommand{\lyricfont}{\sffamily\large}
+\renewcommand{\notebgcolor}{black!13!white}
+\renewcommand{\snumbgcolor}{black!20!white}
+
+% Changing name displayed at "Index"
+\renewcommand{\contentsname}{Índice}
+
+% For displaying songs style "\songs" within the index
+%   Command from: https://tex.stackexchange.com/a/438598
+\newcommand\toctitle{}
+\newcommand\toclink{}
+{\makeatletter\gdef\toclink{\@ifundefined{href}{}{{song\theSB@songsnum-\thesongnum
+                                                   .\ifnum\value{section}=0 1\else2\fi}}}}
+\newcommand\addtotoc[1]{\addtocontents{toc}{\protect\contentsline
+    {\ifnum\value{section}>0sub\fi section}{\numberline\thesongnum#1}{\thepage}\toclink}}
+\newsongkey{toc}
+    {\def\toctitle{\resettitles\addtotoc\songtitle}}
+    {\def\toctitle{\addtotoc{#1}}}
+\renewcommand\extendprelude{\showrefs\showauthors\toctitle}
+
+% Customizing header and footer
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\hyperlink{indice}{Cancionero de la Tuna de la ESCOM}}
+\fancyhead[R]{\hyperlink{indice}{\leftmark}}
+\fancyfoot[C]{\thepage}
+% ===== END STYLING =====

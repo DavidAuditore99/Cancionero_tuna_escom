@@ -1,0 +1,536 @@
+% Documentation at http://mirrors.ibiblio.org/CTAN/macros/latex/contrib/guitarchordschemes/guitarchordschemes_en.pdf
+\usepackage{guitarchordschemes}
+
+% general parameters
+\setchordscheme{
+    rotate=-90,
+    x-unit=2.5mm, % chord size, x
+    y-unit=3mm, % chord size, y
+    name-format=\bfseries, % chord name font
+    name-below=true,
+    finger-format=\bfseries%
+    \footnotesize % fingering font
+}
+
+% Defining chords
+%%% Acordes de Do %%%
+\newsavebox{\C}
+\savebox{\C}
+{
+    \chordscheme[
+        name = C,
+%%        position = 1, %%% Donde empieza el acorde
+        finger = {1/2, 2/4, 3/5}
+%       finger = {3/5}, %%% posicion, cuerda
+%       barre = 1/1-6,  %%% Traste, rango de cuerdas
+%       ring = {2,3,4}  %%% Cuerdas que se tocan, al inicio del acorde
+    ]
+}
+
+\newsavebox{\CVII}
+\savebox{\CVII}
+{
+    \chordscheme[
+        name = C7,
+        finger = {1/2, 2/4, 3/5, 3/3},
+        mute = 6
+    ]
+}
+
+\newsavebox{\CVIITrasteIII}
+\savebox{\CVIITrasteIII}
+{
+    \chordscheme[
+        name = C7,
+        position = 3,
+        barre = 1/1-5,
+        mute = 6,
+        finger = {3/2, 3/4}
+    ]
+}
+
+\newsavebox{\Cm}
+\savebox{\Cm}
+{
+    \chordscheme[
+        name = Cm,
+        position = 3,
+        barre = 1/1-5,
+        finger = {2/2, 3/3, 3/4},
+        mute = 6
+    ]
+}
+
+\newsavebox{\CSusMin}
+\savebox{\CSusMin}
+{
+    \chordscheme[
+        name = C{\#}m,
+        position = 4,
+        barre = 1/1-5,
+        finger = {2/2, 3/3, 3/4},
+        mute = 6
+    ]
+}
+
+\newsavebox{\CSusTrasteIV}
+\savebox{\CSusTrasteIV}
+{
+    \chordscheme[
+        name = C{\#},
+        position = 4,
+        barre = 1/1-5,
+        finger = {3/2, 3/3, 3/4},
+        mute = 6
+    ]
+}
+
+\newsavebox{\CSusVII}
+\savebox{\CSusVII}
+{
+    \chordscheme[
+        name = C{\#}7,
+        position = 3,
+        finger = {1/4, 2/1, 2/3, 2/5},
+        mute = 6
+    ]
+}
+
+\newsavebox{\CSusVIITrasteIV}
+\savebox{\CSusVIITrasteIV}
+{
+    \chordscheme[
+        name = C{\#}7,
+        position = 4,
+        barre = 1/1-5,
+        finger = {3/2, 3/4},
+        mute = 6
+    ]
+}
+
+\newsavebox{\CSusMinVIIBV}
+\savebox{\CSusMinVIIBV}
+{
+    \chordscheme[
+        name = C{\#}m7b5,
+        position = 1,
+        finger = {2/4, 4/5}
+    ]
+}
+
+%%% Acordes de Re %%%
+\newsavebox{\D}
+\savebox{\D}
+{
+    \chordscheme[
+        name = D,
+        mute = 6,
+        finger = {2/1, 2/3, 3/2}
+    ]
+}
+
+\newsavebox{\DVII}
+\savebox{\DVII}
+{
+    \chordscheme[
+        name = D7,
+        mute = 6,
+        finger = {1/2, 2/1, 2/3}
+    ]
+}
+
+\newsavebox{\DVIIQuintoTraste}
+\savebox{\DVIIQuintoTraste}
+{
+    \chordscheme[
+        name = D7,
+        position = 5,
+        barre = 1/1-5,
+        mute = 6,
+        finger = {3/2, 3/4}
+    ]
+}
+
+\newsavebox{\Dm}
+\savebox{\Dm}
+{
+    \chordscheme[
+        name = Dm,
+        mute = 6,
+        finger = {1/1, 2/3, 3/2}
+    ]
+}
+
+\newsavebox{\DmVII}
+\savebox{\DmVII}
+{
+    \chordscheme[
+        name = Dm7,
+        mute = 6,
+        finger = {1/1, 1/2, 2/3}
+    ]
+}
+
+\newsavebox{\DSusII}
+\savebox{\DSusII}
+{
+    \chordscheme[
+        name = DSus2,
+        mute = 6,
+        finger = {2/3, 3/2}
+    ]
+}
+
+\newsavebox{\DSusVIIDim}
+\savebox{\DSusVIIDim}
+{
+    \chordscheme[
+        name = D{\#}7dim,
+        mute = {5, 6},
+        finger = {1/2, 1/4, 2/1, 2/3}
+    ]
+}
+
+%%% Acordes de Mi %%%
+\newsavebox{\E}
+\savebox{\E}
+{
+    \chordscheme[
+        name = E,
+        finger = {1/3, 2/4, 2/5}
+    ]
+}
+
+\newsavebox{\ETrasteVII}
+\savebox{\ETrasteVII}
+{
+    \chordscheme[
+        name = E,
+        position = 7,
+        barre = 1/1-5,
+        finger = {3/2, 3/3, 3/4},
+        mute = 6
+    ]
+}
+
+\newsavebox{\EVII}
+\savebox{\EVII}
+{
+    \chordscheme[
+        name = E7,
+        finger = {1/3, 2/5, 3/2}
+    ]
+}
+
+\newsavebox{\Em}
+\savebox{\Em}
+{
+    \chordscheme[
+        name = Em,
+        finger = {2/4, 2/5}
+    ]
+}
+
+\newsavebox{\EmVII}
+\savebox{\EmVII}
+{
+    \chordscheme[
+        name = Em7,
+        position = 1,
+        finger = {2/5}
+    ]
+}
+
+%%% Acordes de Fa %%%
+\newsavebox{\F}
+\savebox{\F}
+{
+    \chordscheme[
+        name = F,
+        position = 1,
+        barre = 1/1-6,
+        finger = {2/3, 3/4, 3/5}
+    ]
+}
+
+\newsavebox{\Fm}
+\savebox{\Fm}
+{
+    \chordscheme[
+        name = Fm,
+        position = 1,
+        barre = 1/1-6,
+        finger = {3/4, 3/5}
+    ]
+}
+
+\newsavebox{\FSus}
+\savebox{\FSus}
+{
+    \chordscheme[
+        name = F{\#},
+        position = 2,
+        barre = 1/1-6,
+        finger = {2/3, 3/4, 3/5}
+    ]
+}
+
+\newsavebox{\FSusMin}
+\savebox{\FSusMin}
+{
+    \chordscheme[
+        name = F{\#}m,
+        position = 2,
+        barre = 1/1-6,
+        finger = {3/4, 3/5}
+    ]
+}
+
+\newsavebox{\FSusVII}
+\savebox{\FSusVII}
+{
+    \chordscheme[
+        name = F{\#}7,
+        position = 2,
+        barre = 1/1-6,
+        finger = {2/3, 3/5}
+    ]
+}
+
+%%% Acordes de Sol %%%
+\newsavebox{\G}
+\savebox{\G}
+{
+    \chordscheme[
+        name = G,
+        finger = {2/5}, %%% Pueden haber multiples dedos
+        root = {3/6, 3/1}
+    ]
+}
+
+\newsavebox{\GTrasteIII}
+\savebox{\GTrasteIII}
+{
+    \chordscheme[
+        name = G,
+        position = 3,
+        barre = 1/1-6,
+        finger = {2/3, 3/5, 3/4}
+    ]
+}
+
+\newsavebox{\GVII}
+\savebox{\GVII}
+{
+    \chordscheme[
+        name = G7,
+        finger = {1/1, 2/5, 3/6},
+    ]
+}
+
+\newsavebox{\Gm}
+\savebox{\Gm}
+{
+    \chordscheme[
+        name = Gm,
+        position = 3,
+        barre = 1/1-6,
+        finger = {3/5},
+        finger = {3/4}
+    ]
+}
+
+\newsavebox{\GSus}
+\savebox{\GSus}
+{
+    \chordscheme[
+        name = G{\#},
+        position = 4,
+        barre = 1/1-6,
+        finger = {2/3, 3/5, 3/4}
+    ]
+}
+
+\newsavebox{\GSusMin}
+\savebox{\GSusMin}
+{
+    \chordscheme[
+        name = G{\#}m,
+        position = 4,
+        barre = 1/1-6,
+        finger = {3/5},
+        finger = {3/4}
+    ]
+}
+
+\newsavebox{\GSusVII}
+\savebox{\GSusVII}
+{
+    \chordscheme[
+        name = G{\#}7,
+        position = 4,
+        barre = 1/1-6,
+        finger = {2/3, 3/5}
+    ]
+}
+
+%%% Acordes de La %%%
+\newsavebox{\A}
+\savebox{\A}
+{
+    \chordscheme[
+        name = A,
+        finger = {2/2, 2/3, 2/4}
+    ]
+}
+
+\newsavebox{\ATrasteV}
+\savebox{\ATrasteV}
+{
+    \chordscheme[
+        name = A,
+        position = 5,
+        barre = 1/1-6,
+        finger = {2/3, 3/5, 3/4}
+    ]
+}
+
+\newsavebox{\AVII}
+\savebox{\AVII}
+{
+    \chordscheme[
+        name = A7,
+        mute = 6,
+        finger = {2/2, 2/4}
+    ]
+}
+
+\newsavebox{\Am}
+\savebox{\Am}
+{
+    \chordscheme[
+        name = Am,
+        mute = 6,
+        finger = {1/2 , 2/3, 2/4}
+    ]
+}
+
+\newsavebox{\AmVII}
+\savebox{\AmVII}
+{
+    \chordscheme[
+        name = Am7,
+        mute = 6,
+        finger = {1/2, 2/4}
+    ]
+}
+
+\newsavebox{\ASusII}
+\savebox{\ASusII}
+{
+    \chordscheme[
+        name = Asus2,
+        finger = {3/3, 3/4}
+    ]
+}
+
+\newsavebox{\ASusVIIDim}
+\savebox{\ASusVIIDim}
+{
+    \chordscheme[
+        name = ASus7Dim,
+        mute = 6,
+        finger = {1/5, 2/2, 2/4}
+    ]
+}
+
+\newsavebox{\ASusTrasteVI}
+\savebox{\ASusTrasteVI}
+{
+    \chordscheme[
+        name = A{\#},
+        position = 6,
+        barre = 1/1-6,
+        finger = {2/3, 3/5, 3/4}
+    ]
+}
+
+%%% Acordes de Si %%%
+\newsavebox{\B}
+\savebox{\B}
+{
+    \chordscheme[
+        name = B,
+        position = 2,
+        barre = 1/1-6,
+        mute = 6,
+        finger = {3/2, 3/3, 3/4}
+    ]
+}
+
+\newsavebox{\BVII}
+\savebox{\BVII}
+{
+    \chordscheme[
+        name = B7,
+        finger = {1/4, 2/1, 2/3, 2/5},
+        mute = 6
+    ]
+}
+
+\newsavebox{\BTrasteVII}
+\savebox{\BTrasteVII}
+{
+    \chordscheme[
+        name = B,
+        position = 7,
+        barre = 1/1-6,
+        finger = {2/3, 3/5, 3/4}
+    ]
+}
+
+\newsavebox{\Bb}
+\savebox{\Bb}
+{
+    \chordscheme[
+        name = Bb,
+        position = 1,
+        barre = 1/1-6,
+        mute = 6,
+        finger = {3/2, 3/3, 3/4}
+    ]
+}
+
+\newsavebox{\Bm}
+\savebox{\Bm}
+{
+    \chordscheme[
+        name = Bm,
+        position = 2,
+        barre = 1/1-5,
+        finger = {2/2, 3/3, 3/4},
+        mute = 6
+    ]
+}
+
+\newsavebox{\BmVII}
+\savebox{\BmVII}
+{
+    \chordscheme[
+        name = Bm7,
+        position = 2,
+        barre = 1/1-5,
+        finger = {2/2, 3/4},
+        mute = 6
+    ]
+}
+
+\newsavebox{\BAug}
+\savebox{\BAug}
+{
+    \chordscheme[
+        name = Baug,
+        finger = {1/4, 2/5},
+        mute = {1, 6}
+    ]
+}

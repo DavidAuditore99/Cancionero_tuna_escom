@@ -1,0 +1,60 @@
+% ====================
+% Based on the project: http://songs.sourceforge.net/
+% Documentation at: http://songs.sourceforge.net/songsdoc/songs.html
+% Actual tablature from: https://tex.stackexchange.com/a/49156
+% Index from https://tex.stackexchange.com/a/438598
+% Online chord calculator: https://www.imusic-school.com/es/herramientas/acordes-guitarra/
+% ====================
+\documentclass{article}
+
+    % Notas:
+    %   Faltan los bajeos (con LilyPond)
+    %   Falta poner los acordes graficamente
+
+% ALL imports and configuration styles must be into config/main
+\usepackage{config/main}
+
+\begin{document}
+
+    \phantomsection 
+    \hypertarget{indice}{} % Anchor to the Table of Contents
+    \tableofcontents
+    \clearpage
+
+    \songsection{Cancionero}
+    \begin{songs}{}
+
+        \input{src/A/amor_eterno/main}
+        \input{src/B/bolero/main}
+        \input{src/C/cancion_de_serenata/main}
+        \input{src/C/caraluna/main}
+        \input{src/C/cerca_de_ti/main}
+        \input{src/D/de_azul_mi_corazon/main}
+        \input{src/E/el_toro_enamorado_de_la_luna/main}
+        \input{src/E/en_la_soledad/main.tex}
+        \input{src/F/Fuego_bajo_tu_piel/main.tex}
+        \input{src/L/la_copla_del_rondador/main}
+        \input{src/L/la_bikina/main}
+        \input{src/M/moliendo_cafe/main}
+        \input{src/O/ojos_espanoles/main}
+        \input{src/P/para_mi/main}
+        \input{src/P/pastorcillo/main}
+        \input{src/P/pregon/main}
+        \input{src/P/prometo/main}
+        \input{src/S/sin_ti_donato_estefano/main.tex}
+        \input{src/S/Solo_a_Ti/main.tex}
+        \input{src/T/te_mando_flores/main}
+        \input{src/T/te_quiero_bonita/main}
+        \input{src/T/te_voy_a_robar_el_corazon/main}
+        \input{src/V/vino_tinto/main}
+        \input{src/Y/Ya_lo_se_que_tu_te_vas/main}
+
+    \end{songs}
+    
+    \songsection{Bajeos}
+        \input{examples/bajeo_de_ejemplo.tex}
+        
+    \songsection{Rasgueos}
+        \input{examples/rasgueo_de_ejemplo.tex}
+    
+\end{document}
